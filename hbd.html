@@ -24,14 +24,37 @@
 
 <!--the card code-->
 <div id="card">
-<span contenteditable="true">Happy birthday bro🎂</span>
+<span id="TxT" contenteditable="true">Happy birthday bro🎂</span>
+<div>
+<img id="hbd" src="images/hbd.png">
+</div>
 </div>
 <!--the card code-->
 
 <!--the option bar Code-->
 <div id="Option">
 <h4>Option</h4>
+<button id="button">click to change color</button>
 </div>
 <!--the option bar Code-->
+
+<!--javascript for color change-->
+<script type="text/javascript">
+// color array//
+let colors = ['#FFDFDD','#957DAD','#FEC8D8','#B1D4EC','#F9F0C2','#D2F8DF'];
+//get button
+let button = document.getElementById('button');
+//addEventListener
+button.addEventListener('click', function(){
+  //randomizer
+  var randomColor = colors[Math.floor(Math.random() * colors.length)]
+  //get container
+  let container = document.getElementById('card');
+
+  container.style.background = randomColor;
+})
+</script>
+<!--javascript for color change-->
+
   </body>
 </html>
