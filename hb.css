@@ -1,0 +1,16 @@
+#card{
+  width: 782px;
+  height: 524px;
+  position: relative;
+  top:50px;
+  left: 360px;
+background: #FFDFDD;
+}
+#Option{
+  width: 280px;
+  height: 480px;
+  border: 3px solid black;
+  position: absolute;
+  top: 210px;
+
+}
