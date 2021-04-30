@@ -13,9 +13,9 @@ button.addEventListener('click', function(){
 })
 // colour change code
 
-//local storage
-const storageInput = document.querySelector('#store');
-const name = document.querySelector('#name');
-const button = document.querySelector('#save');
+function getDisplay(){
+var ui = document.getElementById("username").value;
+var msg = document.getElementById("message").value;
+document.getElementById("display").innerHTML =ui;
 
-storageInput.addEventListener
+}
