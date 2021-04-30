@@ -41,34 +41,19 @@
 
 <div class="container">
   <h4>Write Name below:</h4>
-<input type="text" name="" value="">
+<input type="text" id="">
 <br>
 <br>
 <h4>Write your message below:</h4>
 <input type="text" name="" value="">
 
-<button type="button" name="button">save</button>
+<button>save</button>
 </div>
 </div>
 <!--the option bar Code-->
 
-<!--javascript for color change-->
-<script type="text/javascript">
-// color array//
-let colors = ['#FFDFDD','#957DAD','#FEC8D8','#B1D4EC','#F9F0C2','#D2F8DF'];
-//get button
-let button = document.getElementById('button');
-//addEventListener
-button.addEventListener('click', function(){
-  //randomizer
-  var randomColor = colors[Math.floor(Math.random() * colors.length)]
-  //get container
-  let container = document.getElementById('card');
+<script src="Informal.js"></script>
 
-  container.style.background = randomColor;
-})
-</script>
-<!--javascript for color change-->
 
   </body>
 </html>

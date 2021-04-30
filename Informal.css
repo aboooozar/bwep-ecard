@@ -33,6 +33,7 @@ width: 268px;
 position: inherit;
 bottom: 5%;
 left: 5%;
+z-index: +1;
 }
 .container{
   width: 268px;
