@@ -1,9 +1,9 @@
 #card{
-  width: 842px;
-  height: 598px;
-  position: relative;
-  top:50px;
-  left: 300px;
+  width: 842px ;
+  height: 598px auto;
+  position: absolute;
+  top: 20%;
+  left: 32%;
 background: #FFDFDD;
 }
 #hbd{
@@ -18,18 +18,32 @@ background: #FFDFDD;
   top: 210px;
   left: 50px;
 }
-h4{
+h2{
   position: inherit;
   top: 2%;
-  left: 40%;
+  left: 36%;
 }
-button{
+#button{
 position: inherit;
-top: 10%;
-left: 25%;
+left: 55%;
+bottom: 20%;
 }
-#TxT{
+.t1{
+width: 268px;
+position: inherit;
+bottom: 5%;
+left: 5%;
+}
+.container{
+  width: 268px;
   position: inherit;
-top: 211px;
-left: 39%;
+  top: 10%;
+  left: 5%;
+}
+p{
+  font-family: Brush Script MT;
+  font-size: 90px;
+  position: inherit;
+  bottom: 5%;
+  right: 42%;
 }
