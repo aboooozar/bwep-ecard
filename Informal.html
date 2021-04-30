@@ -27,7 +27,7 @@
 <div>
 <img id="hbd" src="images/informal/hb2.png">
 </div>
-<p id="name" >name</p>
+<span id="display">name</span>
 </div>
 <!--the card code-->
 
@@ -40,14 +40,14 @@
 </div>
 
 <div class="container">
-  <h4>Write Name below:</h4>
-<input type="text" id="store">
+  <h4>Enter your Name below:</h4>
+<input type="text" id="username">
 <br>
 <br>
 <h4>Write your message below:</h4>
-<input type="text" name="" value="">
+<input type="text" name="" value="" id="message">
 
-<button id="save">save</button>
+<button id="save" onclick="getDisplay()">save</button>
 </div>
 </div>
 <!--the option bar Code-->
