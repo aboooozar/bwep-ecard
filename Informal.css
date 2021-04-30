@@ -35,7 +35,7 @@ bottom: 5%;
 left: 5%;
 z-index: +1;
 }
-.container{
+.uinput{
   width: 268px;
   position: inherit;
   top: 10%;
@@ -47,4 +47,13 @@ span{
   position: inherit;
   bottom: 5%;
   right: 42%;
+}
+#dragdrop{
+  position: inherit;
+  bottom: 15%;
+}
+#cake{
+  width: 150px;
+  height: 130px;
+
 }
