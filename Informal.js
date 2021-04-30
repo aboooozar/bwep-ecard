@@ -12,4 +12,10 @@ button.addEventListener('click', function(){
   container.style.background = randomColor;
 })
 // colour change code
-const storageInput = document.querySelector();
+
+//local storage
+const storageInput = document.querySelector('#store');
+const name = document.querySelector('#name');
+const button = document.querySelector('#save');
+
+storageInput.addEventListener
