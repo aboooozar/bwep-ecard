@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ramadhan Kareem</title>
+    <style>
+      #ramk{
+        position: absolute;
+        top: 10%;
+        left: 30%;
+      background: #FCC3C3;
+      }
+
+      #Setting{
+        width: 280px;
+        height: 480px;
+        border: 3px solid #808080;
+        position: absolute;
+        top: 150px;
+        right: 50px;
+      }
+      .set{
+      width: 270px;
+      position: inherit;
+      bottom: 8%;
+      left: 10%;
+      z-index: +1;
+      }
+      #button{
+      position: inherit;
+      left: 55%;
+      bottom: 20%;
+      }
+      .container{
+        width: 268px;
+        position: inherit;
+        top: 10%;
+        left: 5%;
+      }
+      a{
+        font-family: Amatemora;
+        font-size: 30px;
+        color: black;
+        position:absolute;
+        bottom: 50%;
+        left: 30%;
+
+      }
+      span{
+        font-family: MV Boli;
+        font-size: 20px;
+        color: gold;
+        position:absolute;
+        bottom: 5%;
+        right: 50%;
+      }
+    </style>
+
+
+  </head>
+  <body>
+    <div id="ramk">
+    <div>
+    <img class="image" src="images\Ramadhan.png" width="600" height="600"></a>
+    </div>
+    <span id="display">name</span>
+    <a id="seemsg">your messages </a>
+    </div>
+
+    <div id="Setting">
+    <h4>Settings</h4>
+    <div class="set">
+      <h4>Change Color</h4>
+      <button id="button">Change</button>
+    </div>
+    <!--<input type="text" id="name" placeholder="Your Name"><br>-->
+    <div class="container">
+    <input type="text" id="name" placeholder="Your Name">
+    <br>
+    <br>
+    <input type="text" name="" value="" id="message" placeholder="Your Message">
+
+    <button id="save" onclick="getDisplay()">save</button>
+    </div>
+    </div>
+
+    <script>
+    let colors = ['#C1E1C1','#E0BBE4','#D291BC','#FFDFD3','#B0C7ED','#B8E1ED','#FCFC99','#FFFFCF'];
+
+    let button = document.getElementById('button');
+
+    button.addEventListener('click', function(){
+
+      var random = colors[Math.floor(Math.random() * colors.length)]
+
+      let container = document.getElementById('ramk');
+
+      container.style.background = random;
+    })
+
+
+    function getDisplay(){
+    var user = document.getElementById("name").value;
+    var messages = document.getElementById("message").value;
+    document.getElementById("display").innerHTML = user;
+    document.getElementById("seemsg").innerHTML = messages;
+
+    }
+    </script>
+  </body>
+</html>
