@@ -65,3 +65,19 @@ nav ul li a:hover{
   color: #000;
   background-color: #00FFFF;
 }
+
+h1{
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 50px;
+  color: #E5E4E2;
+}
+
+p{
+  font-size: 15px;
+  text-align: center;
+  padding-top: 40px;
+  color: #fff;
+
+}
