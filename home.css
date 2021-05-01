@@ -241,3 +241,8 @@ button{
   border-radius: 4px;
   margin-top: 20px;
 }
+
+.copyright{
+  position: absolute;
+  bottom: 0;
+}
