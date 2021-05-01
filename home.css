@@ -1,7 +1,7 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family:sans-serif;
 }
 
 
@@ -54,13 +54,18 @@ nav{
 nav ul li{
   list-style: none;
   display: inline-block;
-  margin-left: 60px;
+  margin-left: 80px;
 }
 
 nav ul li a{
   text-decoration: none;
-  color: #fff;
+  color: #00FFFF;
   font-size: 13px;
+}
+
+nav ul li a:hover{
+  color: #000;
+  background-color: #00FFFF;
 }
 
 .row{
@@ -79,59 +84,95 @@ h1{
   font-size: 100px;
 }
 
+h2{
+  color: #fff;
+  font-size: 80px;
+}
+
 p{
   color: #fff;
-  font-size: 11px;
+  font-size: 15px;
   line-height: 15px;
 }
 
-button{
-  width: 180px;
-  color: #000;
-  font-size: 12px;
-  padding: 12px 0;
-  background: #fff;
-  border: 0;
-  border-radius: 20px;
-  outline: none;
-  margin-top: 30px;
-}
+.informal{
+  background-image: url(images2/bdayhome.jpg);
 
-.card{
   width: 200px;
   height: 230px;
   display: inline-block;
   border-radius: 10px;
   padding: 15px 25px;
   box-sizing: border-box;
-  cursor: pointer;
   margin: 10px 15px;
-  background-image: url(images2/pic-1.png);
   background-position: center;
   background-size: cover;
   transition: transform 0.5s;
+  text-decoration: none;
 }
 
+.formal{
+  background-image: url(images2/ramadhanhome.jpg);
 
-.informal {
-  background-image: url(images2/pic-1.png);
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+  text-decoration: none;
 }
-.formal {
-  background-image: url(images2/pic-2.png);
+
+.corporate{
+  background-image: url(images2/corporatehome.jpg);
+
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+  text-decoration: none;
 }
-.corporate {
-  background-image: url(images2/pic-3.png);
-}
-<<<<<<< HEAD
-.customise {
-  background-image: url(images2/pic-4.png);
+
+.customise{
+  background-image: url(images2/customisehome.jpg);
+
+  width: 200px;
+  height: 230px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  margin: 10px 15px;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.5s;
+  text-decoration: none;
 }
 
 .card:hover{
   transform: translateY(-10px);
 }
 
-=======
+h5{
+  color: #000;
+  text-shadow: 0 0 5px #999;
+}
+
+.card p{
+    color: #000;
+    text-shadow: 0 0 5px #999;
+
+}
 
   .modal-bg, .modal-bg1, .modal-bg2, .modal-bg3{
   position: fixed;
@@ -164,18 +205,14 @@ button{
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
->>>>>>> 6ed6711f0cf374e3136d7b63c50d699090096ff6
 
-h5{
-  color: #fff;
-<<<<<<< HEAD
-  text-shadow: 0 0 5px #999;
+
 }
 
-.card p {
-  text-shadow: 0 0 5px #000;
-  font-size: 8px;
-=======
+.modal button{
+  padding: 10px 30px;
+  background-color: #2980b9;
+  color: #fff;
   border: none;
   cursor: pointer;
 }
@@ -193,7 +230,6 @@ h5{
 .informal-direct, .formal-direct, .corporate-direct, .customise-direct{
   height: 50px;
   width: 40px;
->>>>>>> 6ed6711f0cf374e3136d7b63c50d699090096ff6
 }
 
 button{
@@ -204,4 +240,9 @@ button{
   cursor: pointer;
   border-radius: 4px;
   margin-top: 20px;
+}
+
+.copyright{
+  position: absolute;
+  bottom: 0;
 }

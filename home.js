@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-document.getElementById('button').addEventListener('click', function() {
-  document.querySelector('.box').style.display = 'flex';
-}
-
-);
-=======
 var modalBtn = document.querySelector('.modal-btn');
 var modalBtn1 = document.querySelector('.modal-btn1');
 var modalBtn2 = document.querySelector('.modal-btn2');
@@ -63,4 +56,3 @@ modalBtn3.addEventListener('click',function () {
 modalClose3.addEventListener('click',function () {
   modalBg3.classList.remove('bg-active3');
 });
->>>>>>> 6ed6711f0cf374e3136d7b63c50d699090096ff6
