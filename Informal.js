@@ -13,9 +13,20 @@ button.addEventListener('click', function(){
 })
 // colour change code
 
+//display user output code
 function getDisplay(){
 var ui = document.getElementById("username").value;
 var msg = document.getElementById("message").value;
 document.getElementById("display").innerHTML =ui;
+}
+//display user output code
 
+var dragvalue;
+function move(id){
+  var elem = document.getElementById("cake");
+  element.style.position = "absolute";
+  element.onmousedown = function(){
+    dragvalue = element;
+    
+  }
 }
