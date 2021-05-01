@@ -197,12 +197,12 @@ h5{
 .modal{
   position: relative;
   background-color: #fff;
-  width: 30%;
-  height: 30%;
+  width: 70%;
+  height: 70%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: column; */
 
 
 }
@@ -225,7 +225,22 @@ h5{
   font-size: 30px;
 }
 
-.informal-direct, .formal-direct, .corporate-direct, .customise-direct{
+.informal-direct{
+  height: 50px;
+  width: 40px;
+}
+
+.formal-direct{
+  height: 375px;
+  width: 375px;
+}
+
+.corporate-direct{
+  height: 50px;
+  width: 40px;
+}
+
+.customise-direct{
   height: 50px;
   width: 40px;
 }
@@ -243,4 +258,13 @@ button{
 .copyright{
   position: absolute;
   bottom: 0;
+}
+
+
+
+
+
+.modal-bg1{
+  display: flex;
+
 }
