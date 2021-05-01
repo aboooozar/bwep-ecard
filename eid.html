@@ -4,7 +4,110 @@
     <meta charset="utf-8">
     <title>Eid Mubarak</title>
   </head>
-  <body>
+  <style>
+  body{
+    background-color: #FFF8DC;
+  }
+  #eidf{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+  background: #90EE90;
+  }
 
+  #Setting{
+    width: 280px;
+    height: 480px;
+    border: 3px solid #808080;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+  }
+   .set{
+   width: 270px;
+   position: inherit;
+   bottom: 8%;
+   left: 10%;
+   z-index: +1;
+   }
+   #button{
+   position: inherit;
+   left: 55%;
+   bottom: 20%;
+   }
+   .container{
+    width: 268px;
+    position: inherit;
+    top: 10%;
+    left: 5%;
+   }
+    a{
+    font-family: Calisto MT;
+    font-size: 20px;
+    color: black;
+    position:absolute;
+    bottom: 30%;
+    left: 10%;
+    right: 10%;
+
+    }
+   span{
+    font-family: Comic sans;
+    font-size: 20px;
+    color: #8b4513;
+    position:absolute;
+    bottom: 15%;
+    right: 50%;
+  }
+  </style>
+  <body>
+    <div id="eidf">
+    <div>
+      <img src="images\Eidul.png" width="600" height="600">
+    </div>
+    <span id="display">name</span>
+    <a id="seemsg">your messages </a>
+    </div>
+
+    <div id="Setting">
+    <h4>Settings</h4>
+    <div class="set">
+      <h4>Change Color</h4>
+      <button id="button">Change</button>
+    </div>
+
+    <div class="container">
+    <input type="text" id="name" placeholder="Your Name">
+    <br>
+    <br>
+    <input type="text" name="" value="" id="message" rows="5" cols"10" placeholder="Your Message">
+
+    <button id="save" onclick="getDisplay()">save</button>
+    </div>
+    </div>
+
+    <script>
+    let colors = ['#C1E1C1','#FEC9A7','#B6CFB6','#97C1A9','#F197C0','#B8E1ED','#FCFC99','#B49FDC','#50C878','#2E8B98'];
+
+    let button = document.getElementById('button');
+
+    button.addEventListener('click', function(){
+
+      var random = colors[Math.floor(Math.random() * colors.length)]
+
+      let container = document.getElementById('eidf');
+
+      container.style.background = random;
+    })
+
+
+    function getDisplay(){
+    var user = document.getElementById("name").value;
+    var messages = document.getElementById("message").value;
+    document.getElementById("display").innerHTML = user;
+    document.getElementById("seemsg").innerHTML = messages;
+
+    }
+    </script>
   </body>
 </html>
