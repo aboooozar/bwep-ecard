@@ -33,7 +33,6 @@ width: 268px;
 position: inherit;
 bottom: 5%;
 left: 5%;
-z-index: +1;
 }
 .uinput{
   width: 268px;
@@ -41,19 +40,80 @@ z-index: +1;
   top: 10%;
   left: 5%;
 }
-span{
-  font-family: Brush Script MT;
-  font-size: 90px;
+#display{
+  font-family: Bradley Hand;
+  font-style: italic;
+  font-size: 30px;
+  color: #2C3539;
+}
+#display-box{
+  width: 420px;
+  height: 80px;
   position: inherit;
   bottom: 5%;
-  right: 42%;
+  left: 25%;
+  text-align: center;
 }
 #dragdrop{
   position: inherit;
   bottom: 15%;
 }
 #cake{
-  width: 150px;
-  height: 130px;
+  width: 200px;
+  height: 180px;
+}
+#dpkiri{
+  width: 200px;
+  height: 180px;
+position: inherit;
+bottom: 35%;
+}
+#dpkanan{
+  width: 200px;
+  height: 180px;
+  position: inherit;
+  bottom: 35%;
+  right: 0%;
+}
+#msg-box{
+width: 400px;
+height: 180px;
+position:inherit;
+bottom: 30%;
+left: 25%;
+text-align: center;
+}
+
+#msg{
+  font-size: 30px;
+  font-family: Candara;
+}
+#recipient-box{
+  width: 420px;
+  height: 70px;
+  position: inherit;
+  top: 25%;
+  left: 24%;
+  text-align: center;
+}
+#display-recipient{
+  font-family: Candara;
+  color: #2C3539;
+  font-size: 50px;
+}
+.slide{
+  width: 200px;
+  height: 180px;
+}
+div.scrollmenu img{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  width:70px;
+  height: 50px;
+}
+div.scrollmenu{
+  overflow: auto;
+white-space: nowrap;
 
 }

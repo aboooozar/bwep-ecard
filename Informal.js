@@ -15,18 +15,23 @@ button.addEventListener('click', function(){
 
 //display user output code
 function getDisplay(){
-var ui = document.getElementById("username").value;
+var rp = document.getElementById("recipient").value;
 var msg = document.getElementById("message").value;
-document.getElementById("display").innerHTML =ui;
+var ui = document.getElementById("username").value;
+document.getElementById("display-recipient").innerHTML = rp ;
+document.getElementById("msg").innerHTML = msg;
+document.getElementById("display").innerHTML = ui;
 }
 //display user output code
 
-var dragvalue;
-function move(id){
-  var elem = document.getElementById("cake");
-  element.style.position = "absolute";
-  element.onmousedown = function(){
-    dragvalue = element;
-    
-  }
+function allowDrop(ev){
+  ev.preventDefault();
+}
+function drag(ev) {
+  ev.dataTransfer.setData("text",ev.target.id);
+}
+function drop(ev){
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
 }

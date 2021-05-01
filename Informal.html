@@ -24,10 +24,24 @@
 
 <!--the card code-->
 <div id="card">
-<div>
-<img id="hbd" src="images/informal/hb2.png">
+<div><img id="hbd" src="images/informal/hb2.png"></div>
+<!--message-->
+<div id="recipient-box">
+<span id="display-recipient">recipient</span>
 </div>
+<div id="msg-box">
+<p id="msg">Sending you best wishes for success, health, and good
+  fortune today and in the year to come. Enjoy your special day. Happy Birthday!</p>
+</div>
+<!--message-->
+<div id="display-box">
 <span id="display">name</span>
+</div>
+
+<!--drag&drop-->
+<div id="dpkiri" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div id="dpkanan" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<!--drag&drop-->
 </div>
 <!--the card code-->
 
@@ -37,11 +51,16 @@
 <div class="t1">
   <h4>Change Background <br>Colour</h4>
   <button id="button">Click here</button>
+
 </div>
 <!--This is to get the user input -->
 <div class="uinput">
   <h4>Enter your Name below:</h4>
 <input type="text" id="username">
+<br>
+<br>
+<h4>Enter name of the recipient</h4>
+<input type="text" id="recipient">
 <br>
 <br>
 <h4>Write your message below:</h4>
@@ -51,8 +70,13 @@
 </div>
 <!--This is to get the user input -->
 
-<div id="dragdrop"class="dragdropd">
-<img src="images/informal/cake1.png" id="cake">
+<div id="dragdrop" class="scrollmenu">
+<img src="images/informal/cake1.png" id="cake" draggable="true"
+ondragstart="drag(event)" class="slide">
+<img src="images/informal/deco.png" class="slide" id="d">
+<img src="images/informal/deco1.png" class="slide" id="d1">
+<img src="images/informal/deco2.png" class="slide" id="d2">
+<img src="images/informal/deco3.png" class="slide" id="d3">
 </div>
 
 
