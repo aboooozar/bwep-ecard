@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>Ramadhan Kareem</title>
     <style>
+    body{
+      background-color: #FFE5B4;
+    }
       #ramk{
         position: absolute;
         top: 10%;
@@ -42,8 +45,8 @@
         font-size: 30px;
         color: black;
         position:absolute;
-        bottom: 50%;
-        left: 30%;
+        bottom: 40%;
+        left: 10%;
 
       }
       span{
@@ -61,7 +64,7 @@
   <body>
     <div id="ramk">
     <div>
-    <img class="image" src="images\Ramadhan.png" width="600" height="600"></a>
+    <img class="image" src="images\Ramadhan.png" width="600" height="600">
     </div>
     <span id="display">name</span>
     <a id="seemsg">your messages </a>
@@ -78,14 +81,14 @@
     <input type="text" id="name" placeholder="Your Name">
     <br>
     <br>
-    <input type="text" name="" value="" id="message" placeholder="Your Message">
+    <input type="text" name="" value="" id="message" rows="5" cols"20" placeholder="Your Message">
 
     <button id="save" onclick="getDisplay()">save</button>
     </div>
     </div>
 
     <script>
-    let colors = ['#C1E1C1','#E0BBE4','#D291BC','#FFDFD3','#B0C7ED','#B8E1ED','#FCFC99','#FFFFCF'];
+    let colors = ['#C1E1C1','#E0BBE4','#D291BC','#FFDFD3','#B0C7ED','#B8E1ED','#FCFC99','#FFFFCF','#FF6347'];
 
     let button = document.getElementById('button');
 
