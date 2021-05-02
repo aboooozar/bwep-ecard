@@ -113,6 +113,15 @@ nav ul li a:hover{
   left: 10%;
 
 }
+#recnem{
+  font-family: Comic sans;
+  font-size: 20px;
+  color: #8b4513;
+  position:absolute;
+  top: 20%;
+  right: 50%;
+}
+
 span{
   font-family: MV Boli;
   font-size: 20px;
