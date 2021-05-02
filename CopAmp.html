@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="hbd.css">
+  <link rel="stylesheet" href="CopAmp.css">
   <title></title>
 
 </head>
@@ -26,14 +26,13 @@
 
       <!--the card code-->
       <div id="card">
-        <div><img id="hbd" src="images/informal/hb2.png" ></div>
+        <div><img id="hbd" src="images/cooperate/ea.png" ></div>
         <!--message-->
         <div id="recipient-box">
           <span id="display-recipient">recipient</span>
         </div>
         <div id="msg-box">
-          <p id="msg">The birthday party on [Date] at the [Venue] will be magical and delighting if you just decide to bless us with your presence.
-            You are invited!</p>
+          <p id="msg">For his/her excellent performance at the Company for the month of July 2020.</p>
           </div>
           <!--message-->
           <div id="display-box">
@@ -41,7 +40,6 @@
           </div>
 
           <!--drag&drop-->
-          <div id="dpkiri" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <div id="dpkanan" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
           <!--drag&drop-->
         </div>
@@ -73,19 +71,16 @@
           <!--This is to get the user input -->
 
           <div id="dragdrop" class="scrollmenu" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <img src="images/informal/cake1.png" id="cake" draggable="true"
-            ondragstart="drag(event)" class="slide">
-            <img src="images/informal/deco.png" class="slide" id="size" ondragstart="drag(event)">
-            <img src="images/informal/deco1.png" class="slide" id="size1" ondragstart="drag(event)">
-            <img src="images/informal/deco2.png" class="slide" id="size2" ondragstart="drag(event)">
-            <img src="images/informal/deco3.png" class="slide" id="size3" ondragstart="drag(event)">
+            <img src="images/cooperate/c.png" class="slide" id="size3" ondragstart="drag(event)">
+              <img src="images/cooperate/c1.png" class="slide" id="size3" ondragstart="drag(event)">
+              <img src="images/cooperate/c2.png" class="slide" id="size3" ondragstart="drag(event)">
           </div>
 
           <div class="all-button">
             <button id="save" onclick="getDisplay()" class="butang">Apply</button>
             <button onclick="clearf()" class="butang">Clear</button>
             <button type="button" name="button" onclick="saveuser()" class="butang">Set as Favourite</button>
-            <button type="button" name="button" onclick="recall()" class="butang">Load Favourite to Card</button>
+            <button type="button" name="button" onclick="totemplate()" class="butang">Load Favourite to Card</button>
             <button type="button" name="button" onclick="totool()" class="butang">Load Favourite to Settings</button>
             <button  onclick="" class="butang">Preview</button>
           </div>
@@ -94,7 +89,7 @@
         <!--the option bar Code-->
   </div>
 
-      <script src="hbd.js"></script>
+      <script src="CopAmp.js"></script>
 
 
     </body>

@@ -21,8 +21,6 @@ body{
   padding-left: 8%;
   padding-right: 8%;
   box-sizing: border-box;
-
-
 }
 
 .navbar{
@@ -96,11 +94,11 @@ h2{
 }
 #button{
 position: inherit;
-left: 55%;
-bottom: 5%;
-padding: 5px;
-border: 2px solid black;
+right: 2%;
+bottom: -50%;
+padding: 2px;
 z-index: +1;
+background-color: #E68E36;
 }
 .t1{
 width: 268px;
@@ -207,11 +205,10 @@ top: 80%;
 }
 .butang{
   position: inherit;
-  margin:10px;
+  margin:5px;
   background:  #E68E36;
   border: none;
-  padding:5px;
-
+  padding:1px;
 }
 .butang:hover{
   background-color: #D18623;

@@ -67,3 +67,13 @@ document.getElementById("username").value = c;
   document.getElementById("msg").innerHTML = c;
 document.getElementById("display").innerHTML = c;
 }
+
+function totool(){
+  let namaR = document.getElementById("recipient").value;
+  let mssg = document.getElementById("message").value;
+  let namaT = document.getElementById("username").value;
+
+  document.getElementById("recipient").value = localStorage.getItem("namareci",namaR);
+  document.getElementById("message").value = localStorage.getItem("mesis",mssg);
+document.getElementById("username").value = localStorage.getItem("namafrom",namaT);
+}

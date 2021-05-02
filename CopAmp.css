@@ -68,7 +68,7 @@ nav ul li a:hover{
 
 #card{
   width: 842px ;
-  height: 598px auto;
+  height: 595px ;
   position: absolute;
   top: 20%;
   align-items: center;
@@ -94,10 +94,13 @@ h2{
   top: 2%;
   left: 36%;
 }
+h4{
+  color: #2C3539;
+}
 #button{
 position: inherit;
 right: 2%;
-bottom: -45%;
+bottom: -50%;
 padding: 2px;
 z-index: +1;
 background-color: #E68E36;
@@ -117,16 +120,15 @@ left: 5%;
 #display{
   font-family: Bradley Hand;
   font-style: italic;
-  font-size: 30px;
+  font-size: 26px;
   color: #2C3539;
 }
 #display-box{
   width: 420px;
-  height: 80px;
+  height: 60px;
   position: inherit;
-  bottom: 5%;
-  left: 25%;
-  text-align: center;
+  bottom: 6%;
+  left: 23%;
 }
 #dragdrop{
   width: 280px;
@@ -134,43 +136,38 @@ left: 5%;
   position: inherit;
   bottom: 15%;
 }
-#dpkiri{
-  width: 200px;
-  height: 180px;
-position: inherit;
-bottom: 35%;
-}
 #dpkanan{
   width: 200px;
   height: 180px;
   position: inherit;
-  bottom: 35%;
+  bottom: 0%;
   right: 0%;
 }
 #msg-box{
-width: 400px;
-height: 180px;
+width: 630px;
+height: 100px;
 position:inherit;
+text-align: justify;
 bottom: 30%;
-left: 25%;
-text-align: center;
+left: 23%;
 }
 
 #msg{
-  font-size: 30px;
+  font-size: 20px;
   font-family: Candara;
+  color: #3D3C3A;
 }
 #recipient-box{
   width: 420px;
   height: 70px;
   position: inherit;
   top: 25%;
-  left: 24%;
+  left: 30%;
   text-align: center;
 }
 #display-recipient{
   font-family: Candara;
-  color: #2C3539;
+  color: #504A4B;
   font-size: 50px;
 }
 .slide{

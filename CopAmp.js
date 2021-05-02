@@ -1,5 +1,4 @@
-//colour change code
-let colors = ['#FFDFDD','#957DAD','#FEC8D8','#B1D4EC','#F9F0C2','#D2F8DF'];
+let colors = ['#FFDFDD','#43C6DB','#FEC8D8','#B1D4EC','#F9F0C2','#D2F8DF'];
 //get button
 let button = document.getElementById('button');
 //addEventListener
@@ -47,7 +46,7 @@ function saveuser(){
   localStorage.setItem("mesis",mssg);
   localStorage.setItem("namafrom",namaT);
 }
-function recall(){
+function totemplate(){
   let namaR = document.getElementById("recipient").value;
   let mssg = document.getElementById("message").value;
   let namaT = document.getElementById("username").value;
