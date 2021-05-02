@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="Informal.css">
+    <link rel="stylesheet" href="tq.css">
     <link rel="stylesheet" href="ecard.css">
     <title></title>
 
@@ -24,14 +24,14 @@
 
 <!--the card code-->
 <div id="card">
-<div><img id="hbd" src="images/informal/tqu.png"></div>
+<div><img id="hbd" src="images/informal/tq1.png"></div>
 <!--message-->
 <div id="recipient-box">
 <span id="display-recipient">recipient</span>
 </div>
 <div id="msg-box">
-<p id="msg">Sending you best wishes for success, health, and good
-  fortune today and in the year to come. Enjoy your special day. Happy Birthday!</p>
+<p id="msg">In everyone's life, There are those who we treasure, Family and friends that we will cherish forever.
+So i would like you to celebrate with me at [Venue] on [Date].</p>
 </div>
 <!--message-->
 <div id="display-box">
@@ -59,28 +59,35 @@
 <input type="text" id="username">
 <br>
 <br>
-<h4>Enter name of the recipient</h4>
+<h4>Enter the name of the recipient</h4>
 <input type="text" id="recipient">
 <br>
 <br>
 <h4>Write your message below:</h4>
-<input type="text" name="" value="" id="message">
-
-<button id="save" onclick="getDisplay()">save</button>
+<input type="text"  id="message">
+<br><br><br><br><br>
+<h4><u>Element</u></h4>
 </div>
 <!--This is to get the user input -->
 
-<div id="dragdrop" class="scrollmenu">
+<div id="dragdrop" class="scrollmenu" ondrop="drop(event)" ondragover="allowDrop(event)">
 <img src="images/informal/cake1.png" id="cake" draggable="true"
 ondragstart="drag(event)" class="slide">
-<img src="images/informal/deco.png" class="slide" id="d">
-<img src="images/informal/deco1.png" class="slide" id="d1">
-<img src="images/informal/deco2.png" class="slide" id="d2">
-<img src="images/informal/deco3.png" class="slide" id="d3">
+<img src="images/informal/deco.png" class="slide" id="size"ondragstart="drag(event)">
+<img src="images/informal/deco1.png" class="slide"  id="size1"ondragstart="drag(event)">
+<img src="images/informal/deco2.png" class="slide" id="size2" ondragstart="drag(event)">
+<img src="images/informal/deco3.png" class="slide" id="size3" ondragstart="drag(event)">
+<img src="images/informal/deco4.png" class="slide" id="size4" ondragstart="drag(event)">
+<img src="images/informal/deco5.png" class="slide" id="size5" ondragstart="drag(event)">
+<img src="images/informal/jkguys.png" class="slide" id="size6" ondragstart="drag(event)">
 </div>
 
-
-
+<div class="all-button">
+  <button id="save" onclick="getDisplay()" class="butang">Apply</button>
+  <button type="button" name="button" onclick="saveuser()" class="butang">Set as Favourite</button>
+  <button onclick="clearf()" class="butang">Clear</button>
+  <button  onclick="recall()" class="butang">Preview</button>
+</div>
 
 </div>
 <!--the option bar Code-->

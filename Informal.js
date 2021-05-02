@@ -10,6 +10,8 @@ button.addEventListener('click', function(){
   let container = document.getElementById('card');
 
   container.style.background = randomColor;
+
+
 })
 // colour change code
 
@@ -34,4 +36,34 @@ function drop(ev){
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
+}
+//
+function saveuser(){
+  let namaR = document.getElementById("recipient").value;
+  let mssg = document.getElementById("message").value;
+  let namaT = document.getElementById("username").value;
+
+  localStorage.setItem("namareci",namaR);
+  localStorage.setItem("mesis",mssg);
+  localStorage.setItem("namafrom",namaT);
+}
+function recall(){
+  let namaR = document.getElementById("recipient").value;
+  let mssg = document.getElementById("message").value;
+  let namaT = document.getElementById("username").value;
+
+  document.getElementById("display-recipient").innerHTML = localStorage.getItem("namareci",namaR);
+  document.getElementById("msg").innerHTML = localStorage.getItem("mesis",mssg);
+document.getElementById("display").innerHTML = localStorage.getItem("namafrom",namaT);
+
+}
+function clearf(){
+  let c = "";
+document.getElementById("recipient").value = c;
+document.getElementById("message").value = c;
+document.getElementById("username").value = c;
+
+  document.getElementById("display-recipient").innerHTML = c;
+  document.getElementById("msg").innerHTML = c;
+document.getElementById("display").innerHTML = c;
 }
