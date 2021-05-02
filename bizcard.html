@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Business card</title>
+  <link rel="stylesheet" href="bizcard.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="navbar">
+      <a href="home.html"><img src="images/Amazan-logo.png" class="logo"></a>
+      <nav>
+        <ul>
+          <li><a href="customise.html">CREATE YOUR OWN</a></li>
+          <li><a href="templates.html">OUR TEMPLATES</a></li>
+          <li><a href="favourites.html">SET FAVOURITE</a></li>
+          <li><a href="aboutus.html">ABOUT US</a></li>
+        </ul>
+      </nav>
+      <img src="images2/menu.png" class="menu-icon">
+    </div>
+
+
+    <div id="eidf">
+      <div>
+        <img id="biz" src="images\bizcard.png" width="700" height="350">
+      </div>
+      <span><a id="cn">Company Name</a> </span>
+
+      <ul id="details">
+        <li>  <a id="d1">Phone Number</a> </li><br>
+        <li>  <a id="d2"> Company Email</a> </li><br>
+        <li>  <a id="d3">Company Address</a> </li><br>
+        <li>  <a id="d4">Company Website</a> </li><br>
+      </ul>
+
+
+
+    </div>
+
+    <div id="Settings">
+      <h4>Settings</h4>
+      <div class="set">
+        <h4>Change Color</h4>
+        <button id="button">Change</button>
+      </div>
+
+      <div class="bagascontainer">
+        <input type="text" id="phoneno" placeholder="Your Phone Number">
+        <input type="email"  id="compmail" placeholder="Company Email">
+        <input type="text" id="compadd" placeholder="Company Address">
+        <input type="url" id="compweb" placeholder="Company Website">
+        <input type="text" id="compname" placeholder="Your Company Name">
+
+
+        <button id="save" onclick="getDisplay()">save</button><br>
+        <button  type="button" onclick="clearText()">clear</button><br>
+        <button  type="button" onclick="setFavorite()">Set As Favourite</button><br>
+        <button  type="button" onclick="loadFavoritetool">Set Favourites to Settings</button><br>
+        <button  type="button" onclick="previewBtn()">Preview</button><br>
+        <button  type="button" onclick="reset()">Reset to Default</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  let colors = ['#F0FFFF','#696969','#B6CFB6','#FFEBCD','#F197C0','#B8E1ED','#FCFC99','#CD5C5C','#50C878','#2E8B98','#191970','#DB7093','#663399'];
+
+  let button = document.getElementById('button');
+
+  button.addEventListener('click', function(){
+
+    var random = colors[Math.floor(Math.random() * colors.length)]
+
+    let bagascontainer = document.getElementById('eidf');
+
+    bagascontainer.style.background = random;
+  })
+
+
+  function getDisplay(){
+    var a = document.getElementById("phoneno").value;
+    var b = document.getElementById("compmail").value;
+    var c = document.getElementById("compadd").value;
+    var d = document.getElementById("compweb").value;
+    var e = document.getElementById("compname").value;
+
+    document.getElementById("d1").innerHTML = a;
+    document.getElementById("d2").innerHTML = b;
+    document.getElementById("d3").innerHTML = c;
+    document.getElementById("d4").innerHTML = d;
+    document.getElementById("cn").innerHTML = e;
+    }
+
+    function clearText(){
+      let a="";
+      document.getElementById("phoneno").value = a;
+      document.getElementById("compmail").value = a;
+      document.getElementById("compadd").value = a;
+      document.getElementById("compweb").value = a;
+      document.getElementById("compname").value = a;
+    }
+
+    function setFavorite(){
+      var a = document.getElementById("phoneno").value;
+      var b = document.getElementById("compmail").value;
+      var c = document.getElementById("compadd").value;
+      var d = document.getElementById("compweb").value;
+      var e = document.getElementById("compname").value;
+
+      localStorage.setItem("phoneno",a);
+      localStorage.setItem("compmail",b);
+      localStorage.setItem("compadd",c);
+      localStorage.setItem("compweb",d);
+      localStorage.setItem("compname",e);
+    }
+    function loadFavoritetool(){
+      var a = document.getElementById("phoneno").value = localStorage.getItem("phoneno",a);
+      var b = document.getElementById("compmail").value = localStorage.getItem("compmail",b);
+      var c = document.getElementById("compadd").value = localStorage.getItem("compadd",c);
+      var d = document.getElementById("compweb").value = localStorage.getItem("compweb",d);
+      var e = document.getElementById("compname").value = localStorage.getItem("compname",e);
+    }
+
+    function reset(){
+      location.reload();
+      localStorage.clear();
+    }
+  </script>
+</body>
+</html>
