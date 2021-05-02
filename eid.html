@@ -26,11 +26,10 @@
 
     <div id="eidf">
       <div>
-        <img src="images\Eidul.png" width="500" height="500">
+        <img src="images\Eidul.png" width="400" height="400">
       </div>
-      <span id="display">Your name</span>
-      <a id="seemsg">Write your message below </a>
-      <a id="recnem">Receipient name</a>
+      <span id="display">name</span>
+      <a id="seemsg">your messages </a>
     </div>
 
     <div id="Settings">
@@ -43,17 +42,15 @@
       <div class="bagascontainer">
         <input type="text" id="name" placeholder="Your Name">
         <br>
-        <input type="text" id="receipient" placeholder="Receipient name">
         <br>
-        <input type="text" name="" value="" id="message" rows="5" cols"10" placeholder="Write your message below">
+        <input type="text" name="" value="" id="message" rows="5" cols"10" placeholder="Your Message">
 
-
-        <button id="save" onclick="getDisplay()">save</button><br>
-        <button  type="button" onclick="clearText()">clear</button><br>
-        <button  type="button" onclick="setFavorite()">Set As Favourite</button><br>
-        <button  type="button" onclick="loadFavoritetool">Set Favourites to Settings</button><br>
-        <button  type="button" onclick="previewBtn()">Preview</button><br>
-        <button  type="button" onclick="reset()">Reset to Default</button><br>
+        <button id="save" onclick="getDisplay()">save</button>
+        <button  type="button" onclick="clearText()">clear</button>
+        <button  type="button" onclick="setFavorite()">Set As Favourite</button>
+        <button  type="button" onclick="loadFavoritetool">Set Favourites to Settings</button>
+        <button  type="button" onclick="previewBtn()">Preview</button>
+        <button  type="button" onclick="reset()">Reset to Default</button>
       </div>
     </div>
   </div>
@@ -87,23 +84,28 @@
       let a="";
       document.getElementById("name").value = a;
       document.getElementById("message").value = a;
+      document.getElementById("receipient").value = a;
     }
 
     function setFavorite(){
       var user = document.getElementById("name").value;
       var messages = document.getElementById("message").value;
+      var recp = document.getElementById("receipient").value;
 
       localStorage.setItem("name",user);
       localStorage.setItem("message",messages);
+      localStorage.setItem("receipient",recp);
     }
     function loadFavoritetool(){
-    var user = document.getElementById("name").value = localStorage.getItem("name",user);
-    var user = document.getElementById("seemsg").value = localStorage.getItem("message",messages);
+    var user = document.getElementById("display").value = localStorage.getItem("name",user);
+    var messages = document.getElementById("seemsg").value = localStorage.getItem("message",messages);
+    var recp = document.getElementById("recnem").value = localStorage.getItem("receipient",recp);
     }
 
     function reset(){
       location.reload();
-      localStorage.clear();}
+      localStorage.clear();
+    }
   </script>
 </body>
 </html>
