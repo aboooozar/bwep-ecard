@@ -17,12 +17,12 @@ button.addEventListener('click', function(){
 
 //display user output code
 function getDisplay(){
-var rp = document.getElementById("recipient").value;
-var msg = document.getElementById("message").value;
-var ui = document.getElementById("username").value;
-document.getElementById("display-recipient").innerHTML = rp ;
-document.getElementById("msg").innerHTML = msg;
-document.getElementById("display").innerHTML = ui;
+  var rp = document.getElementById("recipient").value;
+  var msg = document.getElementById("message").value;
+  var ui = document.getElementById("username").value;
+  document.getElementById("display-recipient").innerHTML = rp ;
+  document.getElementById("msg").innerHTML = msg;
+  document.getElementById("display").innerHTML = ui;
 }
 //display user output code
 
@@ -54,16 +54,16 @@ function recall(){
 
   document.getElementById("display-recipient").innerHTML = localStorage.getItem("namareci",namaR);
   document.getElementById("msg").innerHTML = localStorage.getItem("mesis",mssg);
-document.getElementById("display").innerHTML = localStorage.getItem("namafrom",namaT);
+  document.getElementById("display").innerHTML = localStorage.getItem("namafrom",namaT);
 
 }
 function clearf(){
   let c = "";
-document.getElementById("recipient").value = c;
-document.getElementById("message").value = c;
-document.getElementById("username").value = c;
+  document.getElementById("recipient").value = c;
+  document.getElementById("message").value = c;
+  document.getElementById("username").value = c;
 
   document.getElementById("display-recipient").innerHTML = c;
   document.getElementById("msg").innerHTML = c;
-document.getElementById("display").innerHTML = c;
+  document.getElementById("display").innerHTML = c;
 }
