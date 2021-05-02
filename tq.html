@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="tq.css">
+  <title></title>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <!--Abuzar code (ex.logo,card)-->
+    <div class="navbar">
+      <a href="home.html"><img src="images/Amazan-logo.png" class="logo"></a>
+      <nav>
+        <ul>
+          <li><a href="customise.html">CREATE YOUR OWN</a></li>
+          <li><a href="templates.html">OUR TEMPLATES</a></li>
+          <li><a href="favourites.html">SET FAVOURITE</a></li>
+          <li><a href="aboutus.html">ABOUT US</a></li>
+        </ul>
+      </nav>
+      <img src="images2/menu.png" class="menu-icon">
+    </div>
+    <!--Abuzar code (ex.logo,card)-->
+
+    <!--the card code-->
+    <div id="card">
+      <div><img id="hbd" src="images/informal/tq1.png" ></div>
+      <!--message-->
+      <div id="recipient-box">
+        <span id="display-recipient">recipient</span>
+      </div>
+      <div id="msg-box">
+        <p id="msg">In everyone's life, There are those who we treasure, Family and friends that we will cherish forever.
+          So i would like you to celebrate with me at [Venue] on [Date].</p>
+        </div>
+        <!--message-->
+        <div id="display-box">
+          <span id="display">name</span>
+        </div>
+
+        <!--drag&drop-->
+        <div id="dpkiri" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="dpkanan" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <!--drag&drop-->
+      </div>
+      <!--the card code-->
+
+      <!--the option bar Code-->
+      <div id="Settings">
+        <h2>Settings</h2>
+        <div class="t1">
+          <h4>Change Background <br>Colour</h4>
+          <button id="button">Click here</button>
+
+        </div>
+        <!--This is to get the user input -->
+        <div class="uinput">
+          <h4>Enter your Name below:</h4>
+          <input type="text" id="username">
+          <br>
+          <br>
+          <h4>Enter the name of the recipient</h4>
+          <input type="text" id="recipient">
+          <br>
+          <br>
+          <h4>Write your message below:</h4>
+          <input type="text"  id="message">
+          <br><br><br><br><br>
+          <h4><u>Element</u></h4>
+        </div>
+        <!--This is to get the user input -->
+
+        <div id="dragdrop" class="scrollmenu" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img src="images/informal/cake1.png" id="cake" draggable="true"
+          ondragstart="drag(event)" class="slide">
+          <img src="images/informal/deco.png" class="slide" id="size"ondragstart="drag(event)">
+          <img src="images/informal/deco1.png" class="slide"  id="size1"ondragstart="drag(event)">
+          <img src="images/informal/deco2.png" class="slide" id="size2" ondragstart="drag(event)">
+          <img src="images/informal/deco3.png" class="slide" id="size3" ondragstart="drag(event)">
+          <img src="images/informal/deco4.png" class="slide" id="size4" ondragstart="drag(event)">
+          <img src="images/informal/deco5.png" class="slide" id="size5" ondragstart="drag(event)">
+          <img src="images/informal/jkguys.png" class="slide" id="size6" ondragstart="drag(event)">
+        </div>
+
+        <div class="all-button">
+          <button id="save" onclick="getDisplay()" class="butang">Apply</button>
+          <button type="button" name="button" onclick="saveuser()" class="butang">Set as Favourite</button>
+          <button onclick="clearf()" class="butang">Clear</button>
+          <button  onclick="recall()" class="butang">Preview</button>
+        </div>
+
+      </div>
+      <!--the option bar Code-->
+    </div>
+    <script src="tq.js"></script>
+
+
+  </body>
+  </html>

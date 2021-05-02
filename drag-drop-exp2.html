@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="dragdrop.css">
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+
+
+function allowDrop1(ev) {
+  ev.preventDefault();
+}
+
+function drag1(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop1(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+
+<h2>Card Customization</h2>
+<p>Drag and drop for each styles you want</p>
+
+<div id="box1">
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+</div>
+
+<div id="div2" ondrop="drop1(event)" ondragover="allowDrop1(event)"></div>
+
+</div>
+
+<div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)" ondrop="drop1(event)" ondragover="allowDrop1(event)">
+  <img src="images/hbd.png" draggable="true" ondragstart="drag1(event)" id="drag1" width="100" height="90">
+
+   <img src="images/hbd.png" draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="90">
+
+    <img src="images/hbd.png" draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="90">
+
+     <img src="images/hbd.png" draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="90">
+
+</div>
+</body>
+</html>

@@ -1,112 +1,76 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Eid Mubarak</title>
-  </head>
-  <style>
-  body{
-    background-color: #FFF8DC;
-  }
-  #eidf{
-    position: absolute;
-    top: 10%;
-    left: 30%;
-  background: #90EE90;
-  }
+<head>
+  <meta charset="utf-8">
+  <title>Eid Mubarak</title>
+  <link rel="stylesheet" href="eid.css">
+</head>
 
-  #Setting{
-    width: 280px;
-    height: 480px;
-    border: 3px solid #808080;
-    position: absolute;
-    top: 150px;
-    left: 50px;
-  }
-   .set{
-   width: 270px;
-   position: inherit;
-   bottom: 8%;
-   left: 10%;
-   z-index: +1;
-   }
-   #button{
-   position: inherit;
-   left: 55%;
-   bottom: 20%;
-   }
-   .container{
-    width: 268px;
-    position: inherit;
-    top: 10%;
-    left: 5%;
-   }
-    a{
-    font-family: Calisto MT;
-    font-size: 20px;
-    color: black;
-    position:absolute;
-    bottom: 30%;
-    left: 10%;
-    right: 10%;
+<body>
 
-    }
-   span{
-    font-family: Comic sans;
-    font-size: 20px;
-    color: #8b4513;
-    position:absolute;
-    bottom: 15%;
-    right: 50%;
-  }
-  </style>
-  <body>
+  <div class="container">
+
+    <div class="navbar">
+      <a href="home.html"><img src="images/Amazan-logo.png" class="logo"></a>
+      <nav>
+        <ul>
+          <li><a href="customise.html">CREATE YOUR OWN</a></li>
+          <li><a href="templates.html">OUR TEMPLATES</a></li>
+          <li><a href="favourites.html">SET FAVOURITE</a></li>
+          <li><a href="aboutus.html">ABOUT US</a></li>
+        </ul>
+      </nav>
+      <img src="images2/menu.png" class="menu-icon">
+    </div>
+
+
     <div id="eidf">
-    <div>
-      <img src="images\Eidul.png" width="600" height="600">
-    </div>
-    <span id="display">name</span>
-    <a id="seemsg">your messages </a>
-    </div>
-
-    <div id="Setting">
-    <h4>Settings</h4>
-    <div class="set">
-      <h4>Change Color</h4>
-      <button id="button">Change</button>
+      <div>
+        <img src="images\Eidul.png" width="400" height="400">
+      </div>
+      <span id="display">name</span>
+      <a id="seemsg">your messages </a>
     </div>
 
-    <div class="container">
-    <input type="text" id="name" placeholder="Your Name">
-    <br>
-    <br>
-    <input type="text" name="" value="" id="message" rows="5" cols"10" placeholder="Your Message">
+    <div id="Settings">
+      <h4>Settings</h4>
+      <div class="set">
+        <h4>Change Color</h4>
+        <button id="button">Change</button>
+      </div>
 
-    <button id="save" onclick="getDisplay()">save</button>
-    <button  type="button" onclick="clearText()">clear</button>
-    <button  type="button" onclick="setFavorite()">Set As Favourite</button>
-    <button  type="button" onclick="loadFavoritetool">Set Favourites to Settings</button>
-    <button  type="button" onclick="previewBtn()">Preview</button>
-    <button  type="button" onclick="reset()">Reset to Default</button>
+      <div class="bagascontainer">
+        <input type="text" id="name" placeholder="Your Name">
+        <br>
+        <br>
+        <input type="text" name="" value="" id="message" rows="5" cols"10" placeholder="Your Message">
+
+        <button id="save" onclick="getDisplay()">save</button>
+        <button  type="button" onclick="clearText()">clear</button>
+        <button  type="button" onclick="setFavorite()">Set As Favourite</button>
+        <button  type="button" onclick="loadFavoritetool">Set Favourites to Settings</button>
+        <button  type="button" onclick="previewBtn()">Preview</button>
+        <button  type="button" onclick="reset()">Reset to Default</button>
+      </div>
     </div>
-    </div>
+  </div>
 
-    <script>
-    let colors = ['#C1E1C1','#FEC9A7','#B6CFB6','#97C1A9','#F197C0','#B8E1ED','#FCFC99','#B49FDC','#50C878','#2E8B98'];
+  <script>
+  let colors = ['#C1E1C1','#FEC9A7','#B6CFB6','#97C1A9','#F197C0','#B8E1ED','#FCFC99','#B49FDC','#50C878','#2E8B98'];
 
-    let button = document.getElementById('button');
+  let button = document.getElementById('button');
 
-    button.addEventListener('click', function(){
+  button.addEventListener('click', function(){
 
-      var random = colors[Math.floor(Math.random() * colors.length)]
+    var random = colors[Math.floor(Math.random() * colors.length)]
 
-      let container = document.getElementById('eidf');
+    let bagascontainer = document.getElementById('eidf');
 
-      container.style.background = random;
-    })
+    bagascontainer.style.background = random;
+  })
 
 
-    function getDisplay(){
+  function getDisplay(){
     var user = document.getElementById("name").value;
     var messages = document.getElementById("message").value;
     document.getElementById("display").innerHTML = user;
@@ -135,7 +99,6 @@
     function reset(){
       location.reload();
       localStorage.clear();
-    }
-    </script>
-  </body>
+  </script>
+</body>
 </html>
