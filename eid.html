@@ -26,10 +26,11 @@
 
     <div id="eidf">
       <div>
-        <img src="images\Eidul.png" width="400" height="400">
+        <img src="images\Eidul.png" width="500" height="500">
       </div>
-      <span id="display">name</span>
-      <a id="seemsg">your messages </a>
+      <span id="display">Your name</span>
+      <a id="seemsg">Write your message below </a>
+      <a id="recnem">Receipient name</a>
     </div>
 
     <div id="Settings">
@@ -42,15 +43,17 @@
       <div class="bagascontainer">
         <input type="text" id="name" placeholder="Your Name">
         <br>
+        <input type="text" id="receipient" placeholder="Receipient name">
         <br>
-        <input type="text" name="" value="" id="message" rows="5" cols"10" placeholder="Your Message">
+        <input type="text" name="" value="" id="message" rows="5" cols"10" placeholder="Write your message below">
 
-        <button id="save" onclick="getDisplay()">save</button>
-        <button  type="button" onclick="clearText()">clear</button>
-        <button  type="button" onclick="setFavorite()">Set As Favourite</button>
-        <button  type="button" onclick="loadFavoritetool">Set Favourites to Settings</button>
-        <button  type="button" onclick="previewBtn()">Preview</button>
-        <button  type="button" onclick="reset()">Reset to Default</button>
+
+        <button id="save" onclick="getDisplay()">save</button><br>
+        <button  type="button" onclick="clearText()">clear</button><br>
+        <button  type="button" onclick="setFavorite()">Set As Favourite</button><br>
+        <button  type="button" onclick="loadFavoritetool">Set Favourites to Settings</button><br>
+        <button  type="button" onclick="previewBtn()">Preview</button><br>
+        <button  type="button" onclick="reset()">Reset to Default</button><br>
       </div>
     </div>
   </div>
@@ -73,8 +76,10 @@
   function getDisplay(){
     var user = document.getElementById("name").value;
     var messages = document.getElementById("message").value;
+    var recp = document.getElementById("receipient").value;
     document.getElementById("display").innerHTML = user;
     document.getElementById("seemsg").innerHTML = messages;
+    document.getElementById("recnem").innerHTML = recp;
 
     }
 
@@ -98,7 +103,7 @@
 
     function reset(){
       location.reload();
-      localStorage.clear();
+      localStorage.clear();}
   </script>
 </body>
 </html>
