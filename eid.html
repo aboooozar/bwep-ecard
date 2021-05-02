@@ -42,6 +42,7 @@
       <div class="bagascontainer">
         <input type="text" id="name" placeholder="Your Name">
         <br>
+        <input type="text" id="receipient" placeholder="Receipient name">
         <br>
         <input type="text" name="" value="" id="message" rows="5" cols"10" placeholder="Your Message">
 
@@ -73,8 +74,10 @@
   function getDisplay(){
     var user = document.getElementById("name").value;
     var messages = document.getElementById("message").value;
+    var recp = document.getElementById("receipient").value;
     document.getElementById("display").innerHTML = user;
     document.getElementById("seemsg").innerHTML = messages;
+    document.getElementById("recnem").innerHTML = recp;
 
     }
 
@@ -82,23 +85,28 @@
       let a="";
       document.getElementById("name").value = a;
       document.getElementById("message").value = a;
+      document.getElementById("receipient").value = a;
     }
 
     function setFavorite(){
       var user = document.getElementById("name").value;
       var messages = document.getElementById("message").value;
+      var recp = document.getElementById("receipient").value;
 
       localStorage.setItem("name",user);
       localStorage.setItem("message",messages);
+      localStorage.setItem("receipient",recp);
     }
     function loadFavoritetool(){
-    var user = document.getElementById("name").value = localStorage.getItem("name",user);
-    var user = document.getElementById("seemsg").value = localStorage.getItem("message",messages);
+    var user = document.getElementById("display").value = localStorage.getItem("name",user);
+    var messages = document.getElementById("seemsg").value = localStorage.getItem("message",messages);
+    var recp = document.getElementById("recnem").value = localStorage.getItem("receipient",recp);
     }
 
     function reset(){
       location.reload();
       localStorage.clear();
+    }
   </script>
 </body>
 </html>
