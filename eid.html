@@ -83,6 +83,11 @@
     <input type="text" name="" value="" id="message" rows="5" cols"10" placeholder="Your Message">
 
     <button id="save" onclick="getDisplay()">save</button>
+    <button  type="button" onclick="clearText()">clear</button>
+    <button  type="button" onclick="setFavorite()">Set As Favourite</button>
+    <button  type="button" onclick="loadFavoritetool">Set Favourites to Settings</button>
+    <button  type="button" onclick="previewBtn()">Preview</button>
+    <button  type="button" onclick="reset()">Reset to Default</button>
     </div>
     </div>
 
@@ -107,6 +112,29 @@
     document.getElementById("display").innerHTML = user;
     document.getElementById("seemsg").innerHTML = messages;
 
+    }
+
+    function clearText(){
+      let a="";
+      document.getElementById("name").value = a;
+      document.getElementById("message").value = a;
+    }
+
+    function setFavorite(){
+      var user = document.getElementById("name").value;
+      var messages = document.getElementById("message").value;
+
+      localStorage.setItem("name",user);
+      localStorage.setItem("message",messages);
+    }
+    function loadFavoritetool(){
+    var user = document.getElementById("name").value = localStorage.getItem("name",user);
+    var user = document.getElementById("seemsg").value = localStorage.getItem("message",messages);
+    }
+
+    function reset(){
+      location.reload();
+      localStorage.clear();
     }
     </script>
   </body>
