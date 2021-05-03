@@ -1,32 +1,112 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="customise.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="navbar">
-        <a href="home.html"><img src="images/Amazan-logo.png" class="logo"></a>
-        <nav>
-          <ul>
-            <li><a href="customise.html">CREATE YOUR OWN</a></li>
-            <li><a href="templates.html">OUR TEMPLATES</a></li>
-            <li><a href="favourites.html">SET FAVOURITE</a></li>
-            <li><a href="aboutus.html">ABOUT US</a></li>
-          </ul>
-        </nav>
-        <img src="images2/menu.png" class="menu-icon">
-      </div>
+<head>
+  <meta charset="utf-8">
+  <title>Eid Mubarak</title>
+  <link rel="stylesheet" href="eid.css">
+</head>
 
-      <div class="whitebox">
-        <img src="images2/whitebox.png" width="400" height="550">
-      </div>
+<body>
+
+  <div class="container">
+
+    <div class="navbar">
+      <a href="home.html"><img src="images/Amazan-logo.png" class="logo"></a>
+      <nav>
+        <ul>
+          <li><a href="customise.html">CREATE YOUR OWN</a></li>
+          <li><a href="templates.html">OUR TEMPLATES</a></li>
+          <li><a href="favourites.html">SET FAVOURITE</a></li>
+          <li><a href="aboutus.html">ABOUT US</a></li>
+        </ul>
+      </nav>
+      <img src="images2/menu.png" class="menu-icon">
     </div>
 
 
-    <script src="customise.js">
-    </script>
-  </body>
+    <div id="eidf">
+      <div>
+        <img src="images2/whitebox.png" width="400" height="400">
+      </div>
+      <span id="display">name</span>
+      <a id="seemsg">your messages </a>
+    </div>
+
+    <div id="Settings">
+      <h4>Settings</h4>
+      <div class="set">
+        <h4>Change Color</h4>
+        <button id="button">Change</button>
+      </div>
+
+      <div class="bagascontainer">
+        <input type="text" id="name" placeholder="Your Name">
+        <br>
+        <input type="text" id="receipient" placeholder="Receipient name">
+        <br>
+        <input type="text" name="" value="" id="message" rows="5" cols"10" placeholder="Your Message">
+
+        <button id="save" onclick="getDisplay()">save</button>
+        <button  type="button" onclick="clearText()">clear</button>
+        <button  type="button" onclick="setFavorite()">Set As Favourite</button>
+        <button  type="button" onclick="loadFavoritetool">Set Favourites to Settings</button>
+        <button  type="button" onclick="previewBtn()">Preview</button>
+        <button  type="button" onclick="reset()">Reset to Default</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  let colors = ['#C1E1C1','#FEC9A7','#B6CFB6','#97C1A9','#F197C0','#B8E1ED','#FCFC99','#B49FDC','#50C878','#2E8B98'];
+
+  let button = document.getElementById('button');
+
+  button.addEventListener('click', function(){
+
+    var random = colors[Math.floor(Math.random() * colors.length)]
+
+    let bagascontainer = document.getElementById('eidf');
+
+    bagascontainer.style.background = random;
+  })
+
+
+  function getDisplay(){
+    var user = document.getElementById("name").value;
+    var messages = document.getElementById("message").value;
+    var recp = document.getElementById("receipient").value;
+    document.getElementById("display").innerHTML = user;
+    document.getElementById("seemsg").innerHTML = messages;
+    document.getElementById("recnem").innerHTML = recp;
+
+    }
+
+    function clearText(){
+      let a="";
+      document.getElementById("name").value = a;
+      document.getElementById("message").value = a;
+      document.getElementById("receipient").value = a;
+    }
+
+    function setFavorite(){
+      var user = document.getElementById("name").value;
+      var messages = document.getElementById("message").value;
+      var recp = document.getElementById("receipient").value;
+
+      localStorage.setItem("name",user);
+      localStorage.setItem("message",messages);
+      localStorage.setItem("receipient",recp);
+    }
+    function loadFavoritetool(){
+    var user = document.getElementById("display").value = localStorage.getItem("name",user);
+    var messages = document.getElementById("seemsg").value = localStorage.getItem("message",messages);
+    var recp = document.getElementById("recnem").value = localStorage.getItem("receipient",recp);
+    }
+
+    function reset(){
+      location.reload();
+      localStorage.clear();
+    }
+  </script>
+</body>
 </html>

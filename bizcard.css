@@ -70,8 +70,8 @@ nav ul li a:hover{
 #eidf{
   position: absolute;
   padding-top: 100px;
-  left: 20%;
-  margin-left: 10%;
+  right: 20%;
+  margin-right: 10%;
   background: #90EE90;
 
 }
@@ -82,7 +82,7 @@ nav ul li a:hover{
   border: 3px solid #808080;
   position: absolute;
   top: 150px;
-  left: 50px;
+  right: 50px;
   background-color: #FEC9A7;
   border-radius: 20px;
 

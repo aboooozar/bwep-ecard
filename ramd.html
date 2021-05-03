@@ -29,7 +29,6 @@
 
     <div id="ramk">
       <div>
-        <img class="image" src="images\Ramadhan.png" width="500" height="500">
       </div>
       <span id="display">Your name</span>
       <a id="seemsg">Write your message below </a>
@@ -44,11 +43,11 @@
       </div>
       <!--<input type="text" id="name" placeholder="Your Name"><br>-->
       <div class="bagascontainer">
-        <input type="text" id="name" placeholder="Your Name">
+        <input type="text" id="inputname" placeholder="Your Name">
         <br>
-        <input type="text" id="receipient" placeholder="Receipient name">
+        <input type="text" id="inputrecipient" placeholder="Receipient name">
         <br>
-        <input type="text" name="" value="" id="message" rows="5" cols"10" placeholder="Write your message below">
+        <input type="text" name="" value="" id="inputmessage" rows="5" cols"10" placeholder="Write your message below">
 
 
         <button id="save" onclick="getDisplay()">save</button><br>
@@ -78,8 +77,8 @@
 
 
   function getDisplay(){
-    var user = document.getElementById("name").value;
-    var messages = document.getElementById("message").value;
+    var user = document.getElementById("inputname").value;
+    var messages = document.getElementById("inputmessage").value;
     var recp = document.getElementById("receipient").value;
     document.getElementById("display").innerHTML = user;
     document.getElementById("seemsg").innerHTML = messages;
@@ -89,15 +88,15 @@
 
     function clearText(){
       let a="";
-      document.getElementById("name").value = a;
-      document.getElementById("message").value = a;
-      document.getElementById("receipient").value = a;
+      document.getElementById("inputname").value = a;
+      document.getElementById("inputmessage").value = a;
+      document.getElementById("inputrecipient").value = a;
     }
 
     function setFavorite(){
-      var user = document.getElementById("name").value;
+      var user = document.getElementById("inputname").value;
       var messages = document.getElementById("message").value;
-      var recp = document.getElementById("receipient").value;
+      var recp = document.getElementById("inputrecipient").value;
 
       localStorage.setItem("name",user);
       localStorage.setItem("message",messages);

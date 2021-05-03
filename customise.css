@@ -66,8 +66,68 @@ nav ul li a:hover{
   background-color: #00FFFF;
 }
 
-.whitebox{
-  margin-top: 30px;
-  margin-left: 90px;
 
+#eidf{
+  position: absolute;
+  padding-top: 100px;
+  left: 20%;
+  margin-left: 10%;
+  background: #90EE90;
+
+}
+
+#Settings{
+  width: 280px;
+  height: 480px;
+  border: 3px solid #808080;
+  position: absolute;
+  top: 150px;
+  right: 50px;
+  background-color: #FEC9A7;
+  border-radius: 20px;
+
+}
+.set{
+  width: 270px;
+  position: inherit;
+  bottom: 8%;
+  left: 10%;
+  z-index: +1;
+}
+#button{
+  position: inherit;
+  left: 55%;
+  bottom: 20%;
+}
+.bagascontainer{
+  width: 268px;
+  position: inherit;
+  top: 10%;
+  left: 5%;
+}
+#seemsg{
+  font-family: Amatemora;
+  font-size: 30px;
+  color: black;
+  position:absolute;
+  bottom: 40%;
+  left: 10%;
+
+}
+#recnem{
+  font-family: Comic sans;
+  font-size: 20px;
+  color: #8b4513;
+  position:absolute;
+  top: 20%;
+  right: 50%;
+}
+
+span{
+  font-family: Comic sans;
+  font-size: 20px;
+  color: #8b4513;
+  position:absolute;
+  bottom: 5%;
+  right: 50%;
 }

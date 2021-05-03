@@ -40,18 +40,18 @@
       </div>
 
       <div class="bagascontainer">
-        <input type="text" id="name" placeholder="Your Name">
+        <input type="text" id="inputname" placeholder="Your Name">
         <br>
-        <input type="text" id="receipient" placeholder="Receipient name">
+        <input type="text" id="inputrecipient" placeholder="Receipient name">
         <br>
-        <input type="text" name="" value="" id="message" rows="5" cols"10" placeholder="Your Message">
+        <input type="text" name="" value="" id="inputmessage" rows="5" cols"10" placeholder="Your Message">
 
-        <button id="save" onclick="getDisplay()">save</button>
-        <button  type="button" onclick="clearText()">clear</button>
-        <button  type="button" onclick="setFavorite()">Set As Favourite</button>
-        <button  type="button" onclick="loadFavoritetool">Set Favourites to Settings</button>
-        <button  type="button" onclick="previewBtn()">Preview</button>
-        <button  type="button" onclick="reset()">Reset to Default</button>
+        <button id="save" onclick="getDisplay()" class="butang">Apply</button>
+        <button onclick="clearf()" class="butang">Clear</button>
+        <button type="button" name="button" onclick="saveuser()" class="butang">Set as Favourite</button>
+        <button type="button" name="button" onclick="recall()" class="butang">Load Favourite to Card</button>
+        <button type="button" name="button" onclick="totool()" class="butang">Load Favourite to Settings</button>
+        <button  onclick="" class="butang">Preview</button>
       </div>
     </div>
   </div>
@@ -72,41 +72,66 @@
 
 
   function getDisplay(){
-    var user = document.getElementById("name").value;
-    var messages = document.getElementById("message").value;
-    var recp = document.getElementById("receipient").value;
-    document.getElementById("display").innerHTML = user;
-    document.getElementById("seemsg").innerHTML = messages;
-    document.getElementById("recnem").innerHTML = recp;
+  var rp = document.getElementById("inputrecipient").value;
+  var msg = document.getElementById("inputmessage").value;
+  var ui = document.getElementById("inputname").value;
+  document.getElementById("display-recipient").innerHTML = rp ;
+  document.getElementById("msg").innerHTML = msg;
+  document.getElementById("display").innerHTML = ui;
+  }
+  //display user output code
 
-    }
+  function allowDrop(ev){
+    ev.preventDefault();
+  }
+  function drag(ev) {
+    ev.dataTransfer.setData("text",ev.target.id);
+  }
+  function drop(ev){
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+  //
+  function saveuser(){
+    let namaR = document.getElementById("inputrecipient").value;
+    let mssg = document.getElementById("inputmessage").value;
+    let namaT = document.getElementById("inputname").value;
 
-    function clearText(){
-      let a="";
-      document.getElementById("name").value = a;
-      document.getElementById("message").value = a;
-      document.getElementById("receipient").value = a;
-    }
+    localStorage.setItem("namareci",namaR);
+    localStorage.setItem("mesis",mssg);
+    localStorage.setItem("namafrom",namaT);
+  }
+  function recall(){
+    let namaR = document.getElementById("inputrecipient").value;
+    let mssg = document.getElementById("inputmessage").value;
+    let namaT = document.getElementById("inputname").value;
 
-    function setFavorite(){
-      var user = document.getElementById("name").value;
-      var messages = document.getElementById("message").value;
-      var recp = document.getElementById("receipient").value;
+    document.getElementById("display-recipient").innerHTML = localStorage.getItem("namareci",namaR);
+    document.getElementById("msg").innerHTML = localStorage.getItem("mesis",mssg);
+  document.getElementById("display").innerHTML = localStorage.getItem("namafrom",namaT);
 
-      localStorage.setItem("name",user);
-      localStorage.setItem("message",messages);
-      localStorage.setItem("receipient",recp);
-    }
-    function loadFavoritetool(){
-    var user = document.getElementById("display").value = localStorage.getItem("name",user);
-    var messages = document.getElementById("seemsg").value = localStorage.getItem("message",messages);
-    var recp = document.getElementById("recnem").value = localStorage.getItem("receipient",recp);
-    }
+  }
+  function clearf(){
+    let c = "";
+  document.getElementById("inputrecipient").value = c;
+  document.getElementById("inputmessage").value = c;
+  document.getElementById("inputname").value = c;
 
-    function reset(){
-      location.reload();
-      localStorage.clear();
-    }
+    document.getElementById("display-recipient").innerHTML = c;
+    document.getElementById("msg").innerHTML = c;
+  document.getElementById("display").innerHTML = c;
+  }
+
+  function totool(){
+    let namaR = document.getElementById("inputrecipient").value;
+    let mssg = document.getElementById("inputmessage").value;
+    let namaT = document.getElementById("inputname").value;
+
+    document.getElementById("inputrecipient").value = localStorage.getItem("namareci",namaR);
+    document.getElementById("inputmessage").value = localStorage.getItem("mesis",mssg);
+  document.getElementById("inputname").value = localStorage.getItem("namafrom",namaT);
+  }
   </script>
 </body>
 </html>

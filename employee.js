@@ -1,5 +1,4 @@
-//colour change code
-let colors = ['#FFDFDD','#957DAD','#FEC8D8','#B1D4EC','#F9F0C2','#D2F8DF'];
+let colors = ['#FFDFDD','#43C6DB','#FEC8D8','#B1D4EC','#F9F0C2','#D2F8DF'];
 //get button
 let button = document.getElementById('button');
 //addEventListener
@@ -47,7 +46,7 @@ function saveuser(){
   localStorage.setItem("mesis",mssg);
   localStorage.setItem("namafrom",namaT);
 }
-function recall(){
+function totemplate(){
   let namaR = document.getElementById("inputrecipient").value;
   let mssg = document.getElementById("inputmessage").value;
   let namaT = document.getElementById("inputname").value;
@@ -55,7 +54,15 @@ function recall(){
   document.getElementById("display-recipient").innerHTML = localStorage.getItem("namareci",namaR);
   document.getElementById("msg").innerHTML = localStorage.getItem("mesis",mssg);
 document.getElementById("display").innerHTML = localStorage.getItem("namafrom",namaT);
+}
+function totool(){
+  let namaR = document.getElementById("inputrecipient").value;
+  let mssg = document.getElementById("inputmessage").value;
+  let namaT = document.getElementById("inputname").value;
 
+  document.getElementById("inputrecipient").value = localStorage.getItem("namareci",namaR);
+  document.getElementById("inputmessage").value = localStorage.getItem("mesis",mssg);
+document.getElementById("inputname").value = localStorage.getItem("namafrom",namaT);
 }
 function clearf(){
   let c = "";
@@ -66,14 +73,4 @@ document.getElementById("inputname").value = c;
   document.getElementById("display-recipient").innerHTML = c;
   document.getElementById("msg").innerHTML = c;
 document.getElementById("display").innerHTML = c;
-}
-
-function totool(){
-  let namaR = document.getElementById("inputrecipient").value;
-  let mssg = document.getElementById("inputmessage").value;
-  let namaT = document.getElementById("inputname").value;
-
-  document.getElementById("inputrecipient").value = localStorage.getItem("namareci",namaR);
-  document.getElementById("inputmessage").value = localStorage.getItem("mesis",mssg);
-document.getElementById("inputname").value = localStorage.getItem("namafrom",namaT);
 }
