@@ -67,37 +67,40 @@ nav ul li a:hover{
 }
 
 
-#eidf{
+#hit{
   position: absolute;
-  padding-top: 100px;
-  right: 20%;
-  margin-right: 10%;
-  background: #90EE90;
-
+  width: 640px;
+  height: 540px auto;
+  left: 20%;
+  background: #F197C0;
 }
-
+#biz{
+  width: 100%;
+  height: 100% auto;
+}
 #Settings{
   width: 280px;
   height: 480px;
-  border: 3px solid #808080;
+  border: 3px solid black;
   position: absolute;
-  top: 150px;
+  top: 210px;
   right: 50px;
-  background-color: #FEC9A7;
+  background-color: #FFEBCD;
   border-radius: 20px;
-
 }
-.set{
-  width: 270px;
+h2{
   position: inherit;
-  bottom: 8%;
-  left: 10%;
-  z-index: +1;
+  top: 2%;
+  left: 36%;
 }
+
 #button{
   position: inherit;
-  left: 55%;
-  bottom: 20%;
+  left: 65%;
+  bottom: 5%;
+  padding: 5px;
+  border: 2px solid black;
+  z-index: +1;
 }
 .bagascontainer{
   width: 268px;
@@ -106,22 +109,92 @@ nav ul li a:hover{
   left: 5%;
 }
 
-#details
-{
-list-style-type: none;
-display: inline-block;
-  position: fixed;
-  margin-right: 180px;
-  top:32%;
-  right:26%;
-
+.t1{
+width: 268px;
+position: inherit;
+bottom: 38%;
+left: 5%;
 }
 
-#cn{
-  font-family: Amatemora;
-  font-size: 40px;
-  color: #000000;
-  position:absolute;
-  top: 60%;
-  right: 60%;
+#display{
+  font-family: Bradley Hand;
+  font-style: italic;
+  font-size: 35px;
+  color: #2C3539;
+}
+#display-box{
+  width: 420px;
+  height: 40px;
+  position: inherit;
+  bottom: 0%;
+  left: 0%;
+  text-align: justify;
+}
+
+#msg-box{
+width: 400px;
+height: 180px;
+position:inherit;
+bottom: 10%;
+left: 10%;
+text-align: justify;
+border: 1px solid black;
+}
+
+#msg{
+  font-size: 15px;
+  font-family: Candara;
+}
+#recipient-box{
+  width: 420px;
+  height: 70px;
+  position: inherit;
+  top: 15%;
+  left: 2%;
+  text-align: center;
+}
+#display-recipient{
+  font-family: Candara;
+  color: #2C3539;
+  font-size: 30px;
+}
+.slide{
+  width: 200px;
+  height: 180px ;
+}
+div.scrollmenu img{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  width:70px;
+  height: 50px;
+}
+div.scrollmenu{
+  overflow: auto;
+white-space: nowrap;
+}
+#message{
+  width: 240px;
+  height: 50px;
+}
+.all-button{
+position: relative;
+top: 80%;
+
+}
+.butang{
+  position: inherit;
+  margin:10px;
+  background:  #E68E36;
+  border: none;
+  padding:5px;
+
+}
+.butang:hover{
+  background-color: #D18623;
+}
+.butang:active {
+  background-color: #D18623;
+  box-shadow: 0 5px #C56A1D;
+  transform: translateY(4px);
 }
