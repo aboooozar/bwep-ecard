@@ -2,14 +2,15 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>Eid Mubarak</title>
-  <link rel="stylesheet" href="eid.css">
-</head>
+  <link rel="stylesheet" href="customise.css">
+  <title>Customise e-cards</title>
 
+</head>
 <body>
 
   <div class="container">
 
+    <!--Abuzar code (ex.logo,card)-->
     <div class="navbar">
       <a href="home.html"><img src="images/Amazan-logo.png" class="logo"></a>
       <nav>
@@ -22,91 +23,82 @@
       </nav>
       <img src="images2/menu.png" class="menu-icon">
     </div>
+    <!--Abuzar code (ex.logo,card)-->
 
-
-    <div id="eidf">
-      <div>
-        <img src="images2/whitebox.png" width="400" height="400">
+    <!--the card code-->
+    <div id="card">
+      <div><img id="hbd" src="images2/whitebox.png" width="400"  height="400"></div>
+      <!--message-->
+      <div id="recipient-box">
+        <span id="display-recipient">recipient</span>
       </div>
-      <span id="display">name</span>
-      <a id="seemsg">your messages </a>
+      <div id="msg-box">
+        <p id="msg">Your message.</p>
+        </div>
+        <!--message-->
+        <div id="display-box">
+          <span id="display">name</span>
+        </div>
+
+        <!--drag&drop-->
+        <div id="dpkiri" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="dpkanan" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <!--drag&drop-->
+      </div>
+      <!--the card code-->
+
+      <!--the option bar Code-->
+      <div id="Settings">
+        <h2>Settings</h2>
+        <div class="t1">
+          <h4>Change colour</h4>
+          <button id="button">Click here</button>
+
+        </div>
+        <!--This is to get the user input -->
+        <div class="uinput">
+          <h4>Your Name</h4>
+          <input type="text" id="inputname">
+          <br>
+          <br>
+          <h4>Recipient name</h4>
+          <input type="text" id="inputrecipient">
+          <br>
+          <br>
+          <h4>Write your message below</h4>
+          <input type="text"  id="inputmessage">
+          <br><br><br>
+        </div>
+        <!--This is to get the user input -->
+
+        <div id="dragdrop" class="scrollmenu" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <h4><u>Drag and drop</u></h4>
+
+          <img src="images/informal/cake1.png" id="cake" draggable="true"
+          ondragstart="drag(event)" class="slide">
+          <img src="images/informal/deco.png" class="slide" id="size"ondragstart="drag(event)">
+          <img src="images/informal/deco1.png" class="slide"  id="size1"ondragstart="drag(event)">
+          <img src="images/informal/deco2.png" class="slide" id="size2" ondragstart="drag(event)">
+          <img src="images/informal/deco3.png" class="slide" id="size3" ondragstart="drag(event)">
+          <img src="images/informal/deco4.png" class="slide" id="size4" ondragstart="drag(event)">
+          <img src="images/informal/deco5.png" class="slide" id="size5" ondragstart="drag(event)">
+          <img src="images/informal/jkguys.png" class="slide" id="size6" ondragstart="drag(event)">
+        </div>
+
+        <div class="all-button">
+          <button id="save" onclick="getDisplay()" class="butang">Apply</button>
+          <button onclick="clearf()" class="butang">Clear</button>
+          <button type="button" name="button" onclick="saveuser()" class="butang">Set as Favourite</button>
+          <button type="button" name="button" onclick="recall()" class="butang">Load Favourite to Card</button>
+          <button type="button" name="button" onclick="totool()" class="butang">Load Favourite to Settings</button>
+          <button  onclick="" class="butang">Preview</button>
+        </div>
+
+      </div>
+      <!--the option bar Code-->
     </div>
-
-    <div id="Settings">
-      <h4>Settings</h4>
-      <div class="set">
-        <h4>Change Color</h4>
-        <button id="button">Change</button>
-      </div>
-
-      <div class="bagascontainer">
-        <input type="text" id="name" placeholder="Your Name">
-        <br>
-        <input type="text" id="receipient" placeholder="Receipient name">
-        <br>
-        <input type="text" name="" value="" id="message" rows="5" cols"10" placeholder="Your Message">
-
-        <button id="save" onclick="getDisplay()">save</button>
-        <button  type="button" onclick="clearText()">clear</button>
-        <button  type="button" onclick="setFavorite()">Set As Favourite</button>
-        <button  type="button" onclick="loadFavoritetool">Set Favourites to Settings</button>
-        <button  type="button" onclick="previewBtn()">Preview</button>
-        <button  type="button" onclick="reset()">Reset to Default</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-  let colors = ['#C1E1C1','#FEC9A7','#B6CFB6','#97C1A9','#F197C0','#B8E1ED','#FCFC99','#B49FDC','#50C878','#2E8B98'];
-
-  let button = document.getElementById('button');
-
-  button.addEventListener('click', function(){
-
-    var random = colors[Math.floor(Math.random() * colors.length)]
-
-    let bagascontainer = document.getElementById('eidf');
-
-    bagascontainer.style.background = random;
-  })
+    <script src="customise.js"></script>
 
 
-  function getDisplay(){
-    var user = document.getElementById("name").value;
-    var messages = document.getElementById("message").value;
-    var recp = document.getElementById("receipient").value;
-    document.getElementById("display").innerHTML = user;
-    document.getElementById("seemsg").innerHTML = messages;
-    document.getElementById("recnem").innerHTML = recp;
-
-    }
-
-    function clearText(){
-      let a="";
-      document.getElementById("name").value = a;
-      document.getElementById("message").value = a;
-      document.getElementById("receipient").value = a;
-    }
-
-    function setFavorite(){
-      var user = document.getElementById("name").value;
-      var messages = document.getElementById("message").value;
-      var recp = document.getElementById("receipient").value;
-
-      localStorage.setItem("name",user);
-      localStorage.setItem("message",messages);
-      localStorage.setItem("receipient",recp);
-    }
-    function loadFavoritetool(){
-    var user = document.getElementById("display").value = localStorage.getItem("name",user);
-    var messages = document.getElementById("seemsg").value = localStorage.getItem("message",messages);
-    var recp = document.getElementById("recnem").value = localStorage.getItem("receipient",recp);
-    }
-
-    function reset(){
-      location.reload();
-      localStorage.clear();
-    }
-  </script>
-</body>
-</html>
+  </body>
+  </html>

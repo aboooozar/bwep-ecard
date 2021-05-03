@@ -21,8 +21,6 @@ body{
   padding-left: 8%;
   padding-right: 8%;
   box-sizing: border-box;
-
-
 }
 
 .navbar{
@@ -67,67 +65,156 @@ nav ul li a:hover{
 }
 
 
-#eidf{
+#card{
+  width: 842px ;
+  height: 598px auto;
   position: absolute;
-  padding-top: 100px;
-  left: 20%;
-  margin-left: 10%;
-  background: #90EE90;
-
+  top: 20%;
+  align-items: center;
+  background: #FFDFDD;
 }
-
+#hbd{
+  width:100%;
+  height:100% auto;
+}
 #Settings{
   width: 280px;
   height: 480px;
-  border: 3px solid #808080;
+  border: 3px solid black;
   position: absolute;
-  top: 150px;
+  top: 210px;
   right: 50px;
-  background-color: #FEC9A7;
+  background-color: #FFEBCD;
   border-radius: 20px;
-
 }
-.set{
-  width: 270px;
+h2{
   position: inherit;
-  bottom: 8%;
-  left: 10%;
-  z-index: +1;
+  top: 2%;
+  left: 36%;
 }
 #button{
-  position: inherit;
-  left: 55%;
-  bottom: 20%;
+position: inherit;
+right: 2%;
+bottom: -50%;
+padding: 2px;
+z-index: +1;
+background-color: #E68E36;
 }
-.bagascontainer{
+.t1{
+width: 268px;
+position: inherit;
+bottom: 48%;
+left: 5%;
+}
+.uinput{
   width: 268px;
   position: inherit;
   top: 10%;
   left: 5%;
 }
-#seemsg{
-  font-family: Amatemora;
+#display{
+  font-family: Bradley Hand;
+  font-style: italic;
+  font-size: 20px;
+  color: #2C3539;
+}
+#display-box{
+  width: 320px;
+  height: 60px;
+  position: inherit;
+  bottom: 18%;
+  right: 2%;
+}
+#dragdrop{
+  width: 280px;
+  height: 280px;
+  position: inherit;
+  bottom: 15%;
+}
+#dpkiri{
+  width: 200px;
+  height: 180px;
+position: inherit;
+bottom: 35%;
+}
+#dpkanan{
+  width: 200px;
+  height: 180px;
+  position: inherit;
+  bottom: 35%;
+  right: 0%;
+}
+#msg-box{
+width: 430px;
+height: 130px;
+position:inherit;
+bottom: 30%;
+left: 24%;
+text-align: center;
+}
+
+#msg{
+  font-size: 15px;
+  font-family: Candara;
+}
+#recipient-box{
+  width: 420px;
+  height: 70px;
+  top: 6%;
+  right: 25%;
+  position: inherit;
+  text-align: center;
+}
+#display-recipient{
+  font-family: Candara;
+  color: #2C3539;
   font-size: 30px;
-  color: black;
-  position:absolute;
-  bottom: 40%;
-  left: 10%;
+}
+.slide{
+  width: 200px;
+  height: 180px;
+}
+div.scrollmenu img{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  width:70px;
+  height: 50px;
+}
+div.scrollmenu{
+  overflow: auto;
+white-space: nowrap;
+}
+#dragdrop{
+width: 280px;
+height: 70px;
+position: inherit;
+bottom: 24%;
+padding-top: 25px;
+border-top: 3px solid black;
+border-bottom: 3px solid black;
+}
+#message{
+  width: 240px;
+  height: 50px;
+}
+.all-button{
+position: relative;
+top: 80%;
 
 }
-#recnem{
-  font-family: Comic sans;
-  font-size: 20px;
-  color: #8b4513;
-  position:absolute;
-  top: 20%;
-  right: 50%;
+.butang{
+  position: inherit;
+  margin:5px;
+  background:  #E68E36;
+  border: none;
+  padding:1px;
 }
-
-span{
-  font-family: Comic sans;
-  font-size: 20px;
-  color: #8b4513;
-  position:absolute;
-  bottom: 5%;
-  right: 50%;
+.butang:hover{
+  background-color: #D18623;
+}
+.butang:active {
+  background-color: #D18623;
+  box-shadow: 0 5px #C56A1D;
+  transform: translateY(4px);
 }
