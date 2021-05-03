@@ -24,111 +24,123 @@
     </div>
 
 
-    <div id="eidf">
+    <div id="hit">
       <div>
-        <img id="biz" src="images\bizcard.png" width="700" height="350">
+        <img id="biz" src="images\hiT.png">
       </div>
-      <span><a id="cn">Company Name</a> </span>
-
-      <ul id="details">
-        <li>  <a id="d1">Phone Number</a> </li><br>
-        <li>  <a id="d2"> Company Email</a> </li><br>
-        <li>  <a id="d3">Company Address</a> </li><br>
-        <li>  <a id="d4">Company Website</a> </li><br>
-      </ul>
-
-
+      <div id="recipient-box">
+        <span id="display-recipient">recipient</span>
+      </div>
+      <div id="msg-box">
+        <p id="msg">Message</p>
+        </div>
+        <!--message-->
+        <div id="display-box">
+          <span id="display">name</span>
+        </div>
 
     </div>
 
     <div id="Settings">
-      <h4>Settings</h4>
-      <div class="set">
-        <h4>Change Color</h4>
-        <button id="button">Change</button>
-      </div>
+      <h2>Settings</h2>
+      <div class="t1">
+        <h4>Change Background <br>Colour</h4>
+        <button id="button">Click here</button>
 
+      </div>
+      <!--This is to get the user input -->
       <div class="bagascontainer">
-        <input type="text" id="phoneno" placeholder="Your Phone Number">
-        <input type="email"  id="compmail" placeholder="Company Email">
-        <input type="text" id="compadd" placeholder="Company Address">
-        <input type="url" id="compweb" placeholder="Company Website">
-        <input type="text" id="compname" placeholder="Your Company Name">
-
-
-        <button id="save" onclick="getDisplay()">save</button><br>
-        <button  type="button" onclick="clearText()">clear</button><br>
-        <button  type="button" onclick="setFavorite()">Set As Favourite</button><br>
-        <button  type="button" onclick="loadFavoritetool">Set Favourites to Settings</button><br>
-        <button  type="button" onclick="previewBtn()">Preview</button><br>
-        <button  type="button" onclick="reset()">Reset to Default</button>
+        <h4>Enter your Name below:</h4>
+        <input type="text" id="username">
+        <br>
+        <br>
+        <h4>Enter the name of the recipient:</h4>
+        <input type="text" id="recipient">
+        <br>
+        <br>
+        <h4>Write your message below:</h4>
+        <input type="text"  id="message">
+        <br><br><br><br><br>
+        <h4><u>Element</u></h4>
       </div>
+      <div class="all-button">
+        <button id="save" onclick="getDisplay()" class="butang">Apply</button>
+        <button type="button" name="button" onclick="saveuser()" class="butang">Set as Favourite</button>
+        <button onclick="clearf()" class="butang">Clear</button>
+        <button  onclick="recall()" class="butang">Preview</button>
+      </div>
+
     </div>
-  </div>
+
 
   <script>
-  let colors = ['#F0FFFF','#696969','#B6CFB6','#FFEBCD','#F197C0','#B8E1ED','#FCFC99','#CD5C5C','#50C878','#2E8B98','#191970','#DB7093','#663399'];
-
+  //colour change code
+  let colors = ['#F0FFFF','#696969','#B6CFB6','#FFEBCD','#F197C0','#B8E1ED','#FCFC99','#CD5C5C','#50C878','#2E8B98','#DB7093'];
+  //get button
   let button = document.getElementById('button');
-
+  //addEventListener
   button.addEventListener('click', function(){
+    //randomizer
+    var randomColor = colors[Math.floor(Math.random() * colors.length)]
+    //get container
+    let bagascontainer = document.getElementById('hit');
 
-    var random = colors[Math.floor(Math.random() * colors.length)]
+    bagascontainer.style.background = randomColor;
 
-    let bagascontainer = document.getElementById('eidf');
 
-    bagascontainer.style.background = random;
   })
 
-
   function getDisplay(){
-    var a = document.getElementById("phoneno").value;
-    var b = document.getElementById("compmail").value;
-    var c = document.getElementById("compadd").value;
-    var d = document.getElementById("compweb").value;
-    var e = document.getElementById("compname").value;
+  var rp = document.getElementById("recipient").value;
+  var msg = document.getElementById("message").value;
+  var ui = document.getElementById("username").value;
+  document.getElementById("display-recipient").innerHTML = rp ;
+  document.getElementById("msg").innerHTML = msg;
+  document.getElementById("display").innerHTML = ui;
+  }
+  //display user output code
 
-    document.getElementById("d1").innerHTML = a;
-    document.getElementById("d2").innerHTML = b;
-    document.getElementById("d3").innerHTML = c;
-    document.getElementById("d4").innerHTML = d;
-    document.getElementById("cn").innerHTML = e;
-    }
+  function allowDrop(ev){
+    ev.preventDefault();
+  }
+  function drag(ev) {
+    ev.dataTransfer.setData("text",ev.target.id);
+  }
+  function drop(ev){
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+  //
+  function saveuser(){
+    let namaR = document.getElementById("recipient").value;
+    let mssg = document.getElementById("message").value;
+    let namaT = document.getElementById("username").value;
 
-    function clearText(){
-      let a="";
-      document.getElementById("phoneno").value = a;
-      document.getElementById("compmail").value = a;
-      document.getElementById("compadd").value = a;
-      document.getElementById("compweb").value = a;
-      document.getElementById("compname").value = a;
-    }
+    localStorage.setItem("namareci",namaR);
+    localStorage.setItem("mesis",mssg);
+    localStorage.setItem("namafrom",namaT);
+  }
+  function recall(){
+    let namaR = document.getElementById("recipient").value;
+    let mssg = document.getElementById("message").value;
+    let namaT = document.getElementById("username").value;
 
-    function setFavorite(){
-      var a = document.getElementById("phoneno").value;
-      var b = document.getElementById("compmail").value;
-      var c = document.getElementById("compadd").value;
-      var d = document.getElementById("compweb").value;
-      var e = document.getElementById("compname").value;
+    document.getElementById("display-recipient").innerHTML = localStorage.getItem("namareci",namaR);
+    document.getElementById("msg").innerHTML = localStorage.getItem("mesis",mssg);
+  document.getElementById("display").innerHTML = localStorage.getItem("namafrom",namaT);
 
-      localStorage.setItem("phoneno",a);
-      localStorage.setItem("compmail",b);
-      localStorage.setItem("compadd",c);
-      localStorage.setItem("compweb",d);
-      localStorage.setItem("compname",e);
-    }
-    function loadFavoritetool(){
-      var a = document.getElementById("phoneno").value = localStorage.getItem("phoneno",a);
-      var b = document.getElementById("compmail").value = localStorage.getItem("compmail",b);
-      var c = document.getElementById("compadd").value = localStorage.getItem("compadd",c);
-      var d = document.getElementById("compweb").value = localStorage.getItem("compweb",d);
-      var e = document.getElementById("compname").value = localStorage.getItem("compname",e);
-    }
+  }
+  function clearf(){
+    let c = "";
+  document.getElementById("recipient").value = c;
+  document.getElementById("message").value = c;
+  document.getElementById("username").value = c;
 
-    function reset(){
-      location.reload();
-      localStorage.clear();
-    }
+    document.getElementById("display-recipient").innerHTML = c;
+    document.getElementById("msg").innerHTML = c;
+  document.getElementById("display").innerHTML = c;
+  }
   </script>
 </body>
 </html>
