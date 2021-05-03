@@ -1,0 +1,220 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family:sans-serif;
+}
+
+
+
+body{
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(images2/background.jpg);
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+}
+
+.navbar{
+  height: 12%;
+  display: flex;
+  align-items: center;
+}
+
+.logo{
+  width: 70px;
+  cursor: pointer;
+  margin: 30px 0;
+  margin-top: 90%;;
+}
+
+.menu-icon{
+  width: 30px;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+nav{
+  flex: 1;
+  text-align: right;
+}
+
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  margin-left: 80px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: #00FFFF;
+  font-size: 13px;
+}
+
+nav ul li a:hover{
+  color: #000;
+  background-color: #00FFFF;
+}
+
+
+#card{
+  width: 842px ;
+  height: 598px auto;
+  position: absolute;
+  top: 20%;
+  align-items: center;
+  background: #FFDFDD;
+}
+#hbd{
+  width:100%;
+  height:100% auto;
+}
+#Settings{
+  width: 280px;
+  height: 480px;
+  border: 3px solid black;
+  position: absolute;
+  top: 210px;
+  right: 50px;
+  background-color: #FFEBCD;
+  border-radius: 20px;
+}
+h2{
+  position: inherit;
+  top: 2%;
+  left: 36%;
+}
+#button{
+position: inherit;
+right: 2%;
+bottom: -50%;
+padding: 2px;
+z-index: +1;
+background-color: #E68E36;
+}
+.t1{
+width: 268px;
+position: inherit;
+bottom: 48%;
+left: 5%;
+}
+.uinput{
+  width: 268px;
+  position: inherit;
+  top: 10%;
+  left: 5%;
+}
+#display{
+  font-family: Bradley Hand;
+  font-style: italic;
+  font-size: 20px;
+  color: #2C3539;
+}
+#display-box{
+  width: 320px;
+  height: 60px;
+  position: inherit;
+  bottom: 18%;
+  right: 2%;
+}
+#dragdrop{
+  width: 280px;
+  height: 280px;
+  position: inherit;
+  bottom: 15%;
+}
+#dpkiri{
+  width: 200px;
+  height: 180px;
+position: inherit;
+bottom: 35%;
+}
+#dpkanan{
+  width: 200px;
+  height: 180px;
+  position: inherit;
+  bottom: 35%;
+  right: 0%;
+}
+#msg-box{
+width: 430px;
+height: 130px;
+position:inherit;
+bottom: 30%;
+left: 24%;
+text-align: center;
+}
+
+#msg{
+  font-size: 15px;
+  font-family: Candara;
+}
+#recipient-box{
+  width: 420px;
+  height: 70px;
+  top: 36%;
+  right: 25%;
+  position: inherit;
+  text-align: center;
+}
+#display-recipient{
+  font-family: Candara;
+  color: #2C3539;
+  font-size: 50px;
+}
+.slide{
+  width: 200px;
+  height: 180px;
+}
+div.scrollmenu img{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  width:70px;
+  height: 50px;
+}
+div.scrollmenu{
+  overflow: auto;
+white-space: nowrap;
+}
+#dragdrop{
+width: 280px;
+height: 70px;
+position: inherit;
+bottom: 24%;
+padding-top: 25px;
+border-top: 3px solid black;
+border-bottom: 3px solid black;
+}
+#message{
+  width: 240px;
+  height: 50px;
+}
+.all-button{
+position: relative;
+top: 80%;
+
+}
+.butang{
+  position: inherit;
+  margin:5px;
+  background:  #E68E36;
+  border: none;
+  padding:1px;
+}
+.butang:hover{
+  background-color: #D18623;
+}
+.butang:active {
+  background-color: #D18623;
+  box-shadow: 0 5px #C56A1D;
+  transform: translateY(4px);
+}
